@@ -15,9 +15,12 @@
     <!-- Link to the external CSS file -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <!-- Link to the favicon -->
-  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
     <style>
         /* General Styles */
+       
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 20px;
@@ -102,7 +105,7 @@
         input,
         select,
         textarea,
-        button {
+        /* button {
             width: 100%;
             max-width: 400px;
             padding: 10px;
@@ -110,14 +113,14 @@
             font-size: 14px;
             border: 1px solid #ddd;
             border-radius: 5px;
-        }
+        } */
 
         input[type="checkbox"],
         input[type="radio"] {
             width: auto;
         }
 
-        button {
+        /* button {
             background-color: #007BFF;
             color: white;
             border: none;
@@ -129,7 +132,7 @@
 
         button:hover {
             background-color: #0056b3;
-        }
+        } */
 
         /* Footer */
         footer {
@@ -169,6 +172,11 @@
 <body>
     <header>
         <h1>HTML Tags and Their Usage</h1>
+        <h2>HTML Tags and Their Usage</h2>
+        <h3>HTML Tags and Their Usage</h3>
+        <h4>HTML Tags and Their Usage</h4>
+        <h5>HTML Tags and Their Usage</h5>
+        <h6>HTML Tags and Their Usage</h6>
     </header>
     <main>
         <!-- basic html tag  -->
@@ -230,19 +238,15 @@
                 </ul>
 
                 <li><b>Anchor tag:</b> <code>&lt;a&gt;</code> is used for links.</li>
-                <a href="#">This is a link</a>
+                <a href="https://www.google.com" target="_blank">visit google</a>
 
                 <li><b>Image tag:</b> <code>&lt;img&gt;</code> is used to display images.</li>
-                <img src="./sample.jpg" alt="Sample Image" style="width:200px;height:auto;">
-                <li><b>audio tag:</b> <code>&lt;audio&gt;</code> is used to play a song .</li>
-                <audio controls>
-                    <source src="test.mp3" type="audio/mp3">
-                    <source src="test.ogg" type="audio/ogg">
-                </audio>
+                <img src="./assets/sample.jpg" alt="Sample Image" style="width:200px;height:auto;">
+               
             </ul>
+            
         </section>
         <hr>
-
 
         <!-- tabel tag -->
         <section>
@@ -298,7 +302,7 @@
             <p>Below is a form that demonstrates various types of input fields:</p>
             <form>
                 <label for="text">Text Input:</label>
-                <input type="text" id="text" name="text" placeholder="Enter your name">
+                <input type="text" id="text" name="firstName" placeholder="Enter your name">
 
                 <label for="email">Email Input:</label>
                 <input type="email" id="email" name="email" placeholder="Enter your email">
@@ -336,7 +340,6 @@
                     <label for="radio1">Option 1</label>
                     <input type="radio" id="radio2" name="radio-group" value="option2">
                     <label for="radio2">Option 2</label>
-
                 </div>
 
                 <label>Checkbox:</label>
@@ -364,11 +367,77 @@
         </section>
         <hr>
 
+        <!-- Multimedia Elements -->
+        <section>
+            <div class="section">
+                <h2>Multimedia Elements</h2>
+                <h3>Add Images in WebPages</h3>
+                <img src="./assets/sample.jpg" alt="Sample Image" style="width:200px;height:auto;"/>
+                <h3>Audio Tag</h3>
+                <audio controls>
+                    <source src="./assets/sample.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+                <h3>Video Tag</h3>
+                <video controls width="320" height="240">
+                    <source src="./assets/sample.mp4" type="video/mp4">
+                    Your browser does not support the video element.
+                </video>
+                <h3>Iframe Tag</h3>
+                
+                <iframe src="https://www.wikipedia.org" width="900" height="300" title="Wikipedia Homepage"></iframe>
+
+            </div>
+        </section>
+        
+
+        <!-- Graphics in HTML5 -->
+        <section>
+            <div class="section">
+                <h2>Graphics in HTML5</h2>
+
+                <!-- Scalable Vector Graphics (SVG) -->
+                <h3>Scalable Vector Graphics (SVG)</h3>
+                <svg width="200" height="200">
+                    <!-- Creates a blue circle with a radius of 50px centered at (100,100) -->
+                    <circle cx="50" cy="100" r="50" fill="blue" />
+                    <!-- Adds white text "SVG" at coordinates (50, 110) -->
+                    <text x="50" y="110" font-size="20" fill="white">SVG</text>
+                </svg>
+
+                <!-- Canvas -->
+                <h3>Canvas</h3>
+                <canvas id="myCanvas" width="200" height="200"></canvas>
+                <script>
+                    // Get the canvas element by ID and its 2D drawing context
+                    const canvas = document.getElementById('myCanvas');
+                    const ctx = canvas.getContext('2d');
+
+                    // Draw a red rectangle at (20, 20) with a width and height of 100px
+                    ctx.fillStyle = 'red';
+                    ctx.fillRect(20, 20, 100, 100);
+
+                    // Draw a blue circle with a radius of 40px centered at (100, 100)
+                    ctx.fillStyle = 'blue';
+                    ctx.arc(100, 100, 40, 0, Math.PI * 2);
+                    ctx.fill();
+                </script>
+
+                <!-- Symbols and Emojis -->
+                <h3>Symbols and Emojis</h3>
+                <p>
+                    <!-- Unicode characters: star, smiley face, and light bulb -->
+                    &#9733; <!-- Star symbol -->
+                    &#x1F600; <!-- Smiley face emoji -->
+                    &#x1F4A1; <!-- Light bulb emoji -->
+                </p>
+            </div>
+        </section>
     </main>
     <footer>
         <p>&copy; 2024 HTML Tags Explanation Page</p>
     </footer>
-    <script>
+    <script src="./script.js">
         console.log("This is a JavaScript message in the console.");
     </script>
 </body>
