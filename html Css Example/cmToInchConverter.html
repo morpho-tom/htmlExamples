@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CM to Inch Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .converter {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .converter input, .converter button {
+            padding: 10px;
+            margin: 5px 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .converter button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .converter button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="converter">
+        <h2>CM to Inch Converter</h2>
+        <input type="number" id="cmInput" placeholder="Enter cm">
+        <button onclick="convert()">Convert to Inch</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function convert() {
+            const cm = document.getElementById('cmInput').value;
+            const inches = cm / 2.54;
+            document.getElementById('result').innerText = `${cm} cm is equal to ${inches.toFixed(2)} inches.`;
+        }
+    </script>
+</body>
+</html>
